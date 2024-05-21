@@ -12,7 +12,7 @@ public class LoginSteps {
     LoginPage loginPage = new LoginPage(DriverFactory.getPage());
 
     @Given("user navigates to {string}")
-    public void navigateToUrl(String url) {
+    public void navigateToUrl(String url) throws InterruptedException {
         loginPage.navigateToUrl(url);
     }
 
