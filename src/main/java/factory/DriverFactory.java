@@ -15,7 +15,7 @@ public class DriverFactory {
     public static ThreadLocal<Page> threadLocalDriver = new ThreadLocal<>(); //For Parallel execution
     public static ThreadLocal<BrowserContext> threadLocalContext = new ThreadLocal<>();
 
-    //Launches Browser as set by user in config file
+   //Launches Browser as set by user in config file
     public Page initDriver(String browserName) {
         BrowserType browserType = null;
         ArrayList<String> arguments  = new ArrayList<>();
@@ -31,7 +31,7 @@ public class DriverFactory {
                 browserType = Playwright.create().chromium();
                 browser = browserType.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(headless).setArgs(arguments));
                 break;
-            case "webkit":
+            case "safari":
                 browserType = Playwright.create().webkit();
                 browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless).setArgs(arguments));
                 break;

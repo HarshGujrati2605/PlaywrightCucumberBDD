@@ -6,10 +6,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.LoginPage;
+import utils.Objects;
 import utils.WebActions;
 
-public class LoginSteps {
-    LoginPage loginPage = new LoginPage(DriverFactory.getPage());
+public class LoginSteps extends Objects{
+	
+    //LoginPage loginPage = new LoginPage(DriverFactory.getPage());
 
     @Given("user navigates to {string}")
     public void navigateToUrl(String url) throws InterruptedException {
@@ -39,5 +41,11 @@ public class LoginSteps {
     @Then("verify that user is logged in and navigated to Profile page")
     public void verifyProfilePage() {
         Assert.assertTrue(loginPage.verifyProfilePage());
+    }
+    
+    @Given("I am on homepage of demoqa")
+    public void clickHome() {
+    	loginPage.clickHomePage();
+    	
     }
 }

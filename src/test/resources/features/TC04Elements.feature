@@ -1,6 +1,5 @@
 Feature: Verify the functionalities of Elements page
 
-  @smoke
   Scenario: Verify User is able to perform actions on Web Elements in Elements page
     Given user navigates to "url"
     When user clicks on "Elements" icon in main page

@@ -24,4 +24,5 @@ public class InteractionsSteps {
     public void verifyDragAndDrop(String dropText) {
         Assert.assertTrue(interactionsPage.verifyDragAndDrop(dropText));
     }
+
 }

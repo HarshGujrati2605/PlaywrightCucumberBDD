@@ -6,7 +6,7 @@ import java.util.Properties;
 public class ConfigReader {
     private Properties properties;
 
-    //This is used to raed from properties files and returns properties object
+    //This is used to read from properties files and returns properties object
     public Properties initProp() {
         properties = new Properties();
         try {
@@ -16,5 +16,7 @@ public class ConfigReader {
             System.out.println("Unable to read Properties file.");
         }
         return properties;
+
+        
     }
 }

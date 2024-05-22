@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/rerun.txt"  // Save Failed test scenarios in rerun.txt file
-       }, tags = "@Alertshandle"
+       }, tags = "@smoke"
 )
 
 public class TestRunner {

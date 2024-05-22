@@ -5,9 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.AlertsFramesWindowsPage;
+import utils.Objects;
 
-public class AlertsFramesWindowsSteps {
-    AlertsFramesWindowsPage alertsFramesWindowsPage = new AlertsFramesWindowsPage(DriverFactory.getPage(), DriverFactory.getContext());
+public class AlertsFramesWindowsSteps extends Objects {
+  //  AlertsFramesWindowsPage alertsFramesWindowsPage = new AlertsFramesWindowsPage(DriverFactory.getPage(), DriverFactory.getContext());
 
     @When("user clicks {string} navbar option in Alerts, Frame & Windows page")
     public void clickAlertFrameWinNavBar(String navbarOption) {

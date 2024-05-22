@@ -1,8 +1,9 @@
 Feature: Verify Alerts, Frame & Windows Page
 
-  @smoke @Alertshandle
+   @Alertshandle @smoke
   Scenario: Verify User is able to handle pop up windows, frames and alerts
     Given user navigates to "url"
+    Given I am on homepage of demoqa
     When user clicks on "Alerts, Frame & Windows" icon in main page
     And user clicks "Browser Windows" navbar option in Alerts, Frame & Windows page
     Then verify "https://demoqa.com/sample" is url of new tab opened in Browser Windows section in Alerts, Frame & Windows page
